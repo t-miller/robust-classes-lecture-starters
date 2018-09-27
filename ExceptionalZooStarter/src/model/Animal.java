@@ -5,8 +5,8 @@ import exceptions.NotHungry;
 
 public class Animal {
 
-    private boolean isHungry = false;
-    private boolean isAllergic = true;
+    private boolean isHungry = true;
+    private boolean isAllergic = false;
     private int eaten = 0;
 
     // getters
