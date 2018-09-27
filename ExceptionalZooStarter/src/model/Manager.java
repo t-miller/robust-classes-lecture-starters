@@ -1,6 +1,8 @@
 package model;
 
+import exceptions.AllergyException;
 import exceptions.BrokeException;
+import exceptions.DidntEat;
 import exceptions.NotHungry;
 
 import java.util.List;
@@ -18,12 +20,11 @@ public class Manager {
     public void manage() throws BrokeException {
         try {
             keeper.feed();
-        } catch (NotHungry notHungry) {
-            System.out.println("Feed less often");
+        } catch (DidntEat didntEat) {
+            System.out.println("Get the doctor!");
             throw new BrokeException();
-        }
-        finally {
-            System.out.println("Manager says: Regardless of what happens");
+        } finally {
+            System.out.println("Finally Manager says: Regardless of what happens");
         }
     }
 
